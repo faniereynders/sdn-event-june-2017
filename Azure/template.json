@@ -4,19 +4,19 @@
     "parameters": {
         "IoTHubName": {
             "defaultValue": "awesome-iot-hub",
-            "type": "String"
+            "type": "string"
         },
         "StorageAccountName": {
             "defaultValue": "awesomesdemostorage",
-            "type": "String"
+            "type": "string"
         },
         "ApplicationPlan": {
             "defaultValue": "WestEuropePlan",
-            "type": "String"
+            "type": "string"
         },
         "FunctionName": {
             "defaultValue": "awesome-functions",
-            "type": "String"
+            "type": "string"
         }
     },
     "variables": {},
@@ -128,7 +128,7 @@
             "type": "Microsoft.Web/serverfarms",
             "sku": {
                 "name": "Y1",
-                "tier": "Dynamic",
+                "tier": "Free",
                 "size": "Y1",
                 "family": "Y",
                 "capacity": 0
