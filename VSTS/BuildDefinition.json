@@ -1,0 +1,203 @@
+{
+    "version": "0.3",
+    "definition": {
+        "build": [
+            {
+                "enabled": true,
+                "continueOnError": false,
+                "alwaysRun": false,
+                "displayName": "dotnet restore",
+                "timeoutInMinutes": 0,
+                "task": {
+                    "id": "5541a522-603c-47ad-91fc-a4b1d163081b",
+                    "versionSpec": "1.*",
+                    "definitionType": "task"
+                },
+                "inputs": {
+                    "command": "restore",
+                    "publishWebProjects": "true",
+                    "projects": "AwesomeApp.csproj",
+                    "arguments": "",
+                    "zipAfterPublish": "true"
+                }
+            },
+            {
+                "enabled": true,
+                "continueOnError": false,
+                "alwaysRun": false,
+                "displayName": "dotnet build",
+                "timeoutInMinutes": 0,
+                "task": {
+                    "id": "5541a522-603c-47ad-91fc-a4b1d163081b",
+                    "versionSpec": "1.*",
+                    "definitionType": "task"
+                },
+                "inputs": {
+                    "command": "build",
+                    "publishWebProjects": "true",
+                    "projects": "AwesomeApp.csproj",
+                    "arguments": "",
+                    "zipAfterPublish": "true"
+                }
+            }
+        ],
+        "options": [
+            {
+                "enabled": false,
+                "definition": {
+                    "id": "7c555368-ca64-4199-add6-9ebaf0b0137d"
+                },
+                "inputs": {
+                    "multipliers": "[]",
+                    "parallel": "false",
+                    "continueOnError": "true",
+                    "additionalFields": "{}"
+                }
+            },
+            {
+                "enabled": false,
+                "definition": {
+                    "id": "a9db38f9-9fdc-478c-b0f9-464221e58316"
+                },
+                "inputs": {
+                    "workItemType": "612718",
+                    "assignToRequestor": "true",
+                    "additionalFields": "{}"
+                }
+            },
+            {
+                "enabled": false,
+                "definition": {
+                    "id": "57578776-4c22-4526-aeb0-86b6da17ee9c"
+                },
+                "inputs": {}
+            },
+            {
+                "enabled": false,
+                "definition": {
+                    "id": "5d58cc01-7c75-450c-be18-a388ddb129ec"
+                },
+                "inputs": {
+                    "branchFilters": "[\"+refs/heads/*\"]",
+                    "additionalFields": "{}"
+                }
+            }
+        ],
+        "triggers": [
+            {
+                "branchFilters": [
+                    "+refs/heads/master"
+                ],
+                "pathFilters": [],
+                "batchChanges": false,
+                "maxConcurrentBuildsPerBranch": 1,
+                "pollingInterval": 0,
+                "triggerType": 2
+            }
+        ],
+        "variables": {
+            "system.debug": {
+                "value": "false",
+                "allowOverride": true
+            },
+            "BuildConfiguration": {
+                "value": "release",
+                "allowOverride": true
+            },
+            "BuildPlatform": {
+                "value": "any cpu",
+                "allowOverride": true
+            }
+        },
+        "retentionRules": [
+            {
+                "branches": [
+                    "+refs/heads/*"
+                ],
+                "artifacts": [],
+                "artifactTypesToDelete": [
+                    "FilePath",
+                    "SymbolStore"
+                ],
+                "daysToKeep": 10,
+                "minimumToKeep": 1,
+                "deleteBuildRecord": true,
+                "deleteTestResults": true
+            }
+        ],
+        "_links": {
+            "self": {
+                "href": "https://faniereynders.visualstudio.com/1fae095f-c11e-4449-b384-8b2b03c99f0b/_apis/build/Definitions/2"
+            },
+            "web": {
+                "href": "https://faniereynders.visualstudio.com/_permalink/_build/index?collectionId=7bd61fd3-ca36-4804-aee7-10d83c9b3b45&projectId=1fae095f-c11e-4449-b384-8b2b03c99f0b&definitionId=2"
+            },
+            "editor": {
+                "href": "https://faniereynders.visualstudio.com/_permalink/_build/definitionEditor?collectionId=7bd61fd3-ca36-4804-aee7-10d83c9b3b45&projectId=1fae095f-c11e-4449-b384-8b2b03c99f0b&definitionId=2"
+            }
+        },
+        "buildNumberFormat": "$(date:yyyyMMdd)$(rev:.r)",
+        "jobAuthorizationScope": 1,
+        "jobTimeoutInMinutes": 60,
+        "jobCancelTimeoutInMinutes": 5,
+        "repository": {
+            "properties": {
+                "cleanOptions": "0",
+                "labelSources": "0",
+                "labelSourcesFormat": "$(build.buildNumber)",
+                "reportBuildStatus": "true",
+                "gitLfsSupport": "false",
+                "skipSyncSource": "false",
+                "fetchDepth": "0",
+                "checkoutNestedSubmodules": "false"
+            },
+            "id": "2a783d90-4cfc-4b8e-a176-1239080c948c",
+            "type": "TfsGit",
+            "name": "Awesome",
+            "url": "https://faniereynders.visualstudio.com/_git/Awesome",
+            "defaultBranch": "refs/heads/master",
+            "clean": "false",
+            "checkoutSubmodules": false
+        },
+        "processParameters": {
+            "inputs": []
+        },
+        "quality": 1,
+        "authoredBy": {
+            "id": "b0dead95-c15e-4461-a095-732045633d21",
+            "displayName": "Fanie Reynders",
+            "uniqueName": "fanie@reynders.co",
+            "url": "https://app.vssps.visualstudio.com/A7797e7d2-e301-4ee6-9ca7-98e3e6b4c714/_apis/Identities/b0dead95-c15e-4461-a095-732045633d21",
+            "imageUrl": "https://faniereynders.visualstudio.com/_api/_common/identityImage?id=b0dead95-c15e-4461-a095-732045633d21"
+        },
+        "queue": {
+            "id": 12,
+            "name": "Hosted VS2017",
+            "pool": {
+                "id": 4,
+                "name": "Hosted VS2017",
+                "isHosted": true
+            }
+        },
+        "id": 2,
+        "name": "Awesome-Visual Studio-CI",
+        "url": "https://faniereynders.visualstudio.com/1fae095f-c11e-4449-b384-8b2b03c99f0b/_apis/build/Definitions/2",
+        "uri": "vstfs:///Build/Definition/2",
+        "path": "\\",
+        "type": 2,
+        "revision": 11,
+        "createdDate": "2017-06-21T19:06:52.820Z",
+        "project": {
+            "id": "1fae095f-c11e-4449-b384-8b2b03c99f0b",
+            "name": "Awesome",
+            "url": "https://faniereynders.visualstudio.com/_apis/projects/1fae095f-c11e-4449-b384-8b2b03c99f0b",
+            "state": "wellFormed",
+            "revision": 21,
+            "visibility": 0
+        }
+    },
+    "metaData": {
+        "customTasks": [],
+        "serviceEndpoints": []
+    }
+}
