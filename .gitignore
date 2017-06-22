@@ -2,3 +2,6 @@
 bin
 obj
 packages
+*.user
+*.lock.json
+*.nuget.*
