@@ -25,8 +25,8 @@
             "comments": "Generalized from resource: '/subscriptions/cd1ea301-3692-417f-ade2-923c3946ef6c/resourceGroups/Awesome-Demo/providers/Microsoft.Devices/IotHubs/awesome-iot-hub'.",
             "type": "Microsoft.Devices/IotHubs",
             "sku": {
-                "name": "S1",
-                "tier": "Standard 1",
+                "name": "F1",
+                "tier": "Free",
                 "capacity": 1
             },
             "name": "[parameters('IoTHubName')]",

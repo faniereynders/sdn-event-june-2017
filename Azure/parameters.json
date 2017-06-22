@@ -3,16 +3,16 @@
     "contentVersion": "1.0.0.0",
     "parameters": {
         "IoTHubName": {
-            "value": "awesome-iot-hub2"
+            "value": "awesome-iot-hub"
         },
         "StorageAccountName": {
-            "value": "awesomesdemostorage2"
+            "value": "awesomesdemostorage"
         },
         "ApplicationPlan": {
-            "value": "WestEuropePlan2"
+            "value": "WestEuropePlan"
         },
         "FunctionName": {
-            "value": "awesome-functions2"
+            "value": "awesome-functions"
         }
     }
 }
