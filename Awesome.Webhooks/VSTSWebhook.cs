@@ -19,7 +19,7 @@ namespace Awesome.Webhook
 
             var data = JsonConvert.DeserializeObject<dynamic>(await req.Content.ReadAsStringAsync());
 
-            var buildResult = (string)data.resource.result;
+            var buildResult = (string)data.resource.status;
 
             log.Info($"Build status: {buildResult}");
 
